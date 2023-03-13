@@ -1,6 +1,22 @@
 import React from "react";
 import {renderHtmlContent} from "../utils/functions";
 
+const renderText=(textArray)=>{
+	return (
+		textArray?.map((array, id)=>{
+		if(array.includes("#"))
+		{
+			return (
+				<h1 key={id} className="text-3xl text-[#212529] pb-4 pt-16">{array.replace(/#/g, "")}</h1>
+			)
+		}
+		else return (
+			<p key={id} className="text-[#6C757D] text-xl">{array}</p>
+		)
+	})
+	)
+};
+
 export default function AboutText(sections, idx) {
 	const {
 		data: {
@@ -29,23 +45,13 @@ export default function AboutText(sections, idx) {
 				/>
 			</div>
 			<div>
-				{textArray?.map((array, id)=>{
-					if(array.includes("#"))
-					{
-						return (
-							<h1 key={id} className="text-3xl text-[#212529] pb-4 pt-16">{array.replace(/#/g, "")}</h1>
-						)
-					}
-					else return (<p key={id} className="text-[#6C757D] text-xl">{array}</p>
-
-					)
-				})}
+				{renderText(textArray)}
 			</div>
 		</div>
 			</div>
-			<div>
-				{renderHtmlContent(section_text)}
-			</div>
+			{/*<div>*/}
+			{/*	{renderHtmlContent(section_text)}*/}
+			{/*</div>*/}
 		</>
 	)
 }
