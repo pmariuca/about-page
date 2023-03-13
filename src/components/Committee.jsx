@@ -20,11 +20,11 @@ const renderCards=(section_cards)=>{
 
 			return (
 				<div key={idx} className="pt-8">
-					<div className="bg-[#F8F8F8] flex justify-center items-center h-96">
+					<div className="bg-[#F8F8F8] relative block overflow-hidden media">
 						<img
 							alt={alt}
 							src={url}
-							className="rounded h-3/4"
+							className="object-cover object-center absolute block max-w-full h-1/2 w-1/2 top-1/4 left-1/4"
 						/>
 					</div>
 					<p className="text-xl text-[#212529] font-medium pt-6">{name}</p>

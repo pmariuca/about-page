@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.media {
+  padding-top: 100%;
+}
+
+input::placeholder {
+  font-size: 14px;
+  color: #343A40;
+  opacity: 1;
+  padding-left: 1.5rem;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.label {
+  display: flex;
+  border-radius:2px;
+  border: 1px #E9ECEF;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+}
+
+.dark {
+  background: #343A40;
+  color: #FFFFFF;
+}

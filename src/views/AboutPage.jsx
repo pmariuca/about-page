@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import DynamicZone from "../components/DynamicZone";
+import Header from "../components/Header";
 import {API_ROUTE} from "../utils/constants";
 
 export default function AboutPage(){
@@ -26,6 +27,7 @@ export default function AboutPage(){
 		<>
 			<div>
 				<div className="overflow-hidden">
+					<Header/>
 					<DynamicZone dynamicSectionsArray={dynamic_sections}/>
 				</div>
 			</div>
